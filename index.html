@@ -1,3 +1,7 @@
+<!-- =================================================================================== -->
+<!-- ================ MTM6201 "Picture This" Assignment by Mark Daniels ================ -->
+<!-- =================================================================================== -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,12 +14,55 @@
 </head>
 
 <body>
+    <!-- =============== Header Section =============== -->
   <header class="header">
     <div class="title">
       <h1>Picture This!</h1>
+      <br>
       <h4>My Really Cool Blog Post</h4>
     </div>
-    <img src="images/museum.jpg" alt="placeholder">
+
+    <!-- Responsive Images Section - Art Direction Approach-->
+    <picture class="image_grid">
+          <source srcset="./images/museum_square_800.png,
+                          ./images/museum_square_1600.png 2x,
+                          ./images/museum_square_2400.png 3x"
+                  media="(min-width: 1600px)"/>
+
+          <source srcset="./images/museum_square_640.png,
+                          ./images/museum_square_1280.png 2x,
+                          ./images/museum_square_1920.png 3x"
+                  media="(min-width: 1280px)"/>
+
+          <source srcset="./images/museum_square_480.png,
+                          ./images/museum_square_960.png 2x,
+                          ./images/museum_square_1440.png 3x"
+                  media="(min-width: 960px)"/>
+
+          <source srcset="./images/museum_landscape_960.png,
+                          ./images/museum_landscape_1920.png 2x,
+                          ./images/museum_landscape_2880.png 3x"
+                  media="(min-width: 720px)"/>
+      
+          <source srcset="./images/museum_landscape_720.png,
+                          ./images/museum_landscape_1440.png 2x,
+                          ./images/museum_landscape_2160.png 3x"
+                  media="(min-width: 480px)"/>
+      
+          <source srcset="./images/museum_landscape_480.png,
+                          ./images/museum_landscape_960.png 2x,
+                          ./images/museum_landscape_1440.png 3x"
+                  media="(min-width: 320px)"/>
+      
+          <source srcset="./images/museum_landscape_320.png,
+                          ./images/museum_landscape_640.png 2x,
+                          ./images/museum_landscape_960.png 3x"
+                  media="(max-width: 319px)"/>
+      
+          <img class="orig-img"
+               src="./images/museum_landscape_320.png" 
+               alt="Interior image of an art museum with hanging oil paintings.">
+      </picture>    
 
   </header>
 </body>
